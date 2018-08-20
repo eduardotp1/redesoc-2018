@@ -7,14 +7,14 @@ from selenium import webdriver
 # Baixe o driver de https://sites.google.com/a/chromium.org/chromedriver/downloads
 # e extraia o executável. Coloque na constante abaixo o caminho completo para ele.
 
-DRIVER_PATH = r'caminho/completo/incluindo/o/proprio/executavel/nao/pare/na/pasta'
+DRIVER_PATH = webdriver.Chrome('C://home/tirta/6semestre/redes/redesoc-2018/Encontro04/dados/chromedriver.exe')
 
 WINDOW_WIDTH = 1024
 WINDOW_HEIGHT = 768
 
-SLEEP_TIME = 2
+SLEEP_TIME = 1000
 
-ROOT_USERNAME = 'SEU USERNAME'
+ROOT_USERNAME = 'tirta'
 
 DATA_DIR = 'data'
 
@@ -70,8 +70,8 @@ def main():
     browser.get('https://www.facebook.com')
     sleep(SLEEP_TIME)
 
-    browser.find_element_by_id('email').send_keys('SEU LOGIN')
-    browser.find_element_by_id('pass').send_keys('SUA SENHA')
+    browser.find_element_by_id('email').send_keys('edu.tirta@gmail.com')
+    browser.find_element_by_id('pass').send_keys('senha')
     browser.find_element_by_id('loginbutton').click()
     sleep(SLEEP_TIME)
 
